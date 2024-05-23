@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/headers', methods=['POST'])  # Only allow GET requests
+@app.route('/headers', methods=['POST', 'GET'])  # Only allow GET requests
 def print_headers():
   """Prints all request headers"""
   headers = request.headers
